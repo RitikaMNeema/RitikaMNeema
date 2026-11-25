@@ -10,6 +10,18 @@ Lately I've been pushing into the overlap between data engineering and LLM syste
 
 ---
 
+## Featured work
+
+| Project | What it does | Stack |
+|---|---|---|
+| **GH Archive Lakehouse** | Incremental, idempotent lakehouse over the public GitHub event stream. Raw → bronze → silver → gold with a blocking quality gate, documented SLAs, and atomic per-file redo. Deliberately model-free — the hard parts are schema evolution, partition design, and late-arriving data. 33/33 dbt tests green on real data. | Iceberg, Spark, dbt on Trino, Airflow, Postgres |
+| [**FraudLens**](https://github.com/RitikaMNeema/Large_Scale_Product-Review) | End-to-end big-data pipeline over 20.8M records (11 GB): Spark batch ETL, dual sentiment + fraud models, and a Structured Streaming scorer that flagged 20,048 fraudulent records (3.71%). Includes an autonomous LLM auditor that reviews flagged records over an MCP tool server and emits structured audit reports. | PySpark, Kafka, MLflow, FastAPI, Ollama, FastMCP |
+| [**PaySim Fraud Triage**](https://github.com/RitikaMNeema/paysim-fraud-chain-triage) | Fraud detection on 6.3M mobile-money transactions at 773:1 class imbalance. Chain-aware features (TRANSFER→CASH_OUT), 7 models benchmarked, calibrated CatBoost at PR-AUC 0.9986, and a GREEN/YELLOW/RED triage system with SHAP behind every flag. | CatBoost, scikit-learn, SHAP |
+| [**Netflix Analytics Pipeline**](https://github.com/RitikaMNeema/Netflix-Data-Analytics-Pipeline-Snowflake-dbt-AWS-S3) | Enterprise-shaped warehouse workflow: S3 → Snowflake via `COPY INTO`, then modular, tested, version-controlled dbt transformations into analytics models. | AWS S3, Snowflake, dbt |
+| [**Urban Traffic & Weather**](https://github.com/RitikaMNeema/Urban-Traffic-Weather-Analysis) | Orchestrated pipeline joining live traffic and weather APIs to surface California congestion hotspots, modeled in Snowflake and visualized for real-time situational awareness. | Airflow, Snowflake, dbt, Preset, TomTom & Open-Meteo APIs |
+
+---
+
 ## What I work with
 
 **Data & warehousing** — PySpark · Spark SQL · Apache Iceberg · Trino · dbt · Airflow · Snowflake · Kafka · DuckDB · PostgreSQL · MySQL · Delta/Parquet · partition & schema-evolution design · idempotent reprocessing · late-arriving data
@@ -26,16 +38,11 @@ Lately I've been pushing into the overlap between data engineering and LLM syste
 
 ---
 
-## Featured work
+## More projects
 
 | Project | What it does | Stack |
 |---|---|---|
-| **GH Archive Lakehouse** | Incremental, idempotent lakehouse over the public GitHub event stream. Raw → bronze → silver → gold with a blocking quality gate, documented SLAs, and atomic per-file redo. Deliberately model-free — the hard parts are schema evolution, partition design, and late-arriving data. 33/33 dbt tests green on real data. | Iceberg, Spark, dbt on Trino, Airflow, Postgres |
-| [**FraudLens**](https://github.com/RitikaMNeema/Large_Scale_Product-Review) | End-to-end big-data pipeline over 20.8M records (11 GB): Spark batch ETL, dual sentiment + fraud models, and a Structured Streaming scorer that flagged 20,048 fraudulent records (3.71%). Includes an autonomous LLM auditor that reviews flagged records over an MCP tool server and emits structured audit reports. | PySpark, Kafka, MLflow, FastAPI, Ollama, FastMCP |
-| [**PaySim Fraud Triage**](https://github.com/RitikaMNeema/paysim-fraud-chain-triage) | Fraud detection on 6.3M mobile-money transactions at 773:1 class imbalance. Chain-aware features (TRANSFER→CASH_OUT), 7 models benchmarked, calibrated CatBoost at PR-AUC 0.9986, and a GREEN/YELLOW/RED triage system with SHAP behind every flag. | CatBoost, scikit-learn, SHAP |
-| [**Netflix Analytics Pipeline**](https://github.com/RitikaMNeema/Netflix-Data-Analytics-Pipeline-Snowflake-dbt-AWS-S3) | Enterprise-shaped warehouse workflow: S3 → Snowflake via `COPY INTO`, then modular, tested, version-controlled dbt transformations into analytics models. | AWS S3, Snowflake, dbt |
-| [**Urban Traffic & Weather**](https://github.com/RitikaMNeema/Urban-Traffic-Weather-Analysis) | Orchestrated pipeline joining live traffic and weather APIs to surface California congestion hotspots, modeled in Snowflake and visualized for real-time situational awareness. | Airflow, Snowflake, dbt, Preset, TomTom & Open-Meteo APIs |
-| [**Clinverify**](https://github.com/RitikaMNeema/Clinical-Discharge-Treatment-Plan-Verification) | Neurosymbolic checker for LLM-generated clinical discharge plans. Compiles each plan into logic and tests it with an SMT solver, naming the broken rule when a plan fails. Runs on a synthetic stand-in, so the whole thing is reproducible without credentialed data. | Python, Z3, pandas |
+| [**Clinverify**](https://github.com/Akashkumarsenthil/Clinical-Discharge-Treatment-Plan-Verification) | Neurosymbolic checker for LLM-generated clinical discharge plans. Compiles each plan into logic and tests it with an SMT solver, naming the broken rule when a plan fails. Runs on a synthetic stand-in, so the whole thing is reproducible without credentialed data. *(DATA 298A team project — I own the model track)* | Python, Z3, pandas |
 | [**Healthcare Multi-Agent Copilot**](https://github.com/RitikaMNeema/Healthcare-Multi-Agent-Copilot) | Multi-agent copilot for claims-denial management: planner/executor/critic agents, hybrid keyword + vector retrieval with citation provenance checks, guardrails, human-in-the-loop approval, and an eval harness with a golden set. Fully reproducible offline against a deterministic mock LLM. | LangGraph, Python, synthetic data |
 | [**SkillSync**](https://github.com/RitikaMNeema/SkillSync) | Three-tier distributed LinkedIn simulation — microservices, Kafka event streaming, and agentic AI workflows for hiring and analytics. *(group project)* | TypeScript, Kafka, microservices |
 | [**NL2SQL**](https://github.com/RitikaMNeema/NL2SQL) | Conversational analytics over a cloud-hosted relational database: semantic query understanding, adaptive table selection, and LLM-driven SQL generation across 8+ tables. | LangChain, ChromaDB, Streamlit, Gemini |
